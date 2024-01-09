@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import THUMBS_UP from '../assets/thumbUp.png';
 import THUMBS_DOWN from '../assets/thumbDown.png'
 import NOT_SURE from '../assets/notSure.png'
+import SummeryPage from './SummeryPage';
 
 const Poll_Form = [
     {
@@ -75,17 +76,17 @@ function FormSection({ name, input, onNextClick }) {
             </div>
             <div className='w-1/2 flex items-center justify-center'>
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -50 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ opacity: 0, y: 500 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     className='flex items-center justify-center gap-10'
                 >
                     {input.map((item, index) => (
                         <div
                             key={index}
                             className={`flex flex-col items-center justify-center cursor-pointer  duration-50 
-                            ${hoverIndex !== null && hoverIndex !== index ? 'opacity-50' : ''}`}
+                            ${hoverIndex !== null && hoverIndex !== index ? 'opacity-40' : ''}`}
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(null)}
                             onClick={() => onNextClick({ id: Math.floor(Math.random() * 100), name, input: item })}
@@ -116,7 +117,7 @@ function Crousal() {
     const isEndPage = currentIndex === Poll_Form.length;
 
     return (
-        <div className='flex h-screen w-screen overflow-hidden'>
+        <div className='flex h-screen w-screen overflow-hidden' >
             <div className='w-[5vw] bg-indigo-500 h-full flex flex-col'>
                 <div className='flex items-center justify-center p-3'>
                     <Framer size='2em' color='white' />
@@ -132,20 +133,7 @@ function Crousal() {
                 </div>
             </div>
             {
-                isEndPage ? (
-                    <div className='w-full h-full'>
-                        {
-                            formData.length > 0 && (
-                                formData.map((item, index) => (
-                                    <div key={index}>
-                                        {item.name}
-                                        <img src={item.input.src} alt={item.input.alt} />
-                                    </div>
-                                ))
-                            )
-                        }
-                    </div>
-                )
+                isEndPage ? (<SummeryPage content={formData} />)
                     :
                     (
                         <div className='h-full w-full'>
