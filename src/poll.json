@@ -1,0 +1,65 @@
+[
+    {
+        "id": 0,
+        "Title": "How was your week overall?",
+        "Options": [
+            {
+                "label": "Good",
+                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
+                "alt": "Good"
+            },
+            {
+                "label": "Not Sure",
+                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
+                "alt": "Not Sure"
+            },
+            {
+                "label": "Bad",
+                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
+                "alt": "Bad"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "Title": "How did you like last week's bowling event?",
+        "Options": [
+            {
+                "label": "Good",
+                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
+                "alt": "Good"
+            },
+            {
+                "label": "Not Sure",
+                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
+                "alt": "Not Sure"
+            },
+            {
+                "label": "Bad",
+                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
+                "alt": "Bad"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "Title": "How easy did we make it to get your problem resolved?",
+        "Options": [
+            {
+                "label": "Good",
+                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
+                "alt": "Good"
+            },
+            {
+                "label": "Not Sure",
+                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
+                "alt": "Not Sure"
+            },
+            {
+                "label": "Bad",
+                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
+                "alt": "Bad"
+            }
+        ]
+    }
+]
