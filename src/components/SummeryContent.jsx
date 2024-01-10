@@ -5,8 +5,7 @@ function SummeryContent({ item, isLast }) {
         <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{
-                opacity: 1,
-                x: 0
+                opacity: 1, x: 0
             }}
             transition={{ duration: 0.5, delay: 0.7 }}
             className={`py-8  border-slate-300  ${!isLast ? 'border-b-2' : ''} flex items-center justify-between`}
