@@ -1,5 +1,3 @@
-
-import './App.css';
 import Crousal from './components/Crousal.jsx'
 function App() {
   return (

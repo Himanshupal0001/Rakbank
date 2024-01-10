@@ -1,21 +1,25 @@
-import { BASE_URL } from '../constant'
+import { BASE_URL } from '../utils/constant'
+
 function useSubmitResponse() {
-    const handleSubmit = async (content) => {
+    const handleSubmit = async (formData) => {
         try {
             const response = await fetch(BASE_URL, {
                 method: 'POST',
                 headers: { "content-type": "application/json" },
-                body: JSON.stringify(content)
+                body: JSON.stringify(formData)
             })
-            const json = await response.json();
-            console.log(json);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             if (window.confirm('Response submitted succesfully')) {
                 window.location.reload();
             }
         }
         catch (err) {
             console.error(err);
-            alert('Something went wrong')
+            if (alert('Something went wrong')) {
+                window.location.reload();
+            }
         }
     }
 

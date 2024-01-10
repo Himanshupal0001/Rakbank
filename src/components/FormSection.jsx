@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useDispatch } from 'react-redux';
+import { handleNextIndex } from '../store/PollSlice';
 
 function FormSection({ Title, Options, onNextClick }) {
     const [hoverIndex, setHoverIndex] = useState(null);
+    const dispatch = useDispatch();
+    //handling mouse hover
     const handleMouseEnter = (index) => {
         setHoverIndex(index);
     }
     const handleMouseLeave = () => {
         setHoverIndex(null);
     }
+
+    const handleClick = (item) => {
+        dispatch(handleNextIndex(item))
+    }
     return (
-        <div className='flex w-full h-full'>
+        <div className='flex w-full h-full' data-testid='form-component'>
+            {/* render Title */}
             <div className='w-1/2 bg-indigo-500 flex items-center justify-center'>
                 <motion.div
                     initial={{ y: -1000 }}
@@ -22,6 +31,7 @@ function FormSection({ Title, Options, onNextClick }) {
                     {Title}
                 </motion.div>
             </div>
+            {/* render options */}
             <div className='w-1/2 flex items-center justify-center'>
                 <motion.div
                     initial={{ y: -1000 }}
@@ -37,7 +47,7 @@ function FormSection({ Title, Options, onNextClick }) {
                             ${hoverIndex !== null && hoverIndex !== index ? 'opacity-40' : ''}`}
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(null)}
-                            onClick={() => onNextClick({ id: Math.floor(Math.random() * 100), Title, input: item })}
+                            onClick={() => handleClick({ id: Math.floor(Math.random() * 10000 + Math.random()), Title, input: item })}
                         >
                             <img src={item.src} alt={item.alt} className='h-14 w-14' />
                             {hoverIndex === index && (
