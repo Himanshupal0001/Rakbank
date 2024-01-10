@@ -5,17 +5,17 @@
         "Options": [
             {
                 "label": "Good",
-                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
+                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-up-min.png",
                 "alt": "Good"
             },
             {
                 "label": "Not Sure",
-                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
+                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/not-sure-min.png",
                 "alt": "Not Sure"
             },
             {
                 "label": "Bad",
-                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
+                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-down-min.png",
                 "alt": "Bad"
             }
         ]

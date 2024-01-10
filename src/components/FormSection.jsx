@@ -49,7 +49,7 @@ function FormSection({ Title, Options, onNextClick }) {
                             onMouseLeave={() => handleMouseLeave(null)}
                             onClick={() => handleClick({ id: Math.floor(Math.random() * 10000 + Math.random()), Title, input: item })}
                         >
-                            <img src={item.src} alt={item.alt} className='h-14 w-14' />
+                            <img src={item.src} alt={item.alt} />
                             {hoverIndex === index && (
                                 <span className={`transition-transform text-indigo-500 font-medium`}>
                                     {item.label}
