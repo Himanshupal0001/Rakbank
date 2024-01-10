@@ -1,21 +1,24 @@
-[
+import THUMB_UP from '../assets/thumbUp.png';
+import THUMB_DOWN from '../assets/thumbDown.png';
+import NOT_SURE from '../assets/notSure.png';
+export const poll = [
     {
         "id": 0,
         "Title": "How was your week overall?",
         "Options": [
             {
                 "label": "Good",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-up-min.png",
+                "src": THUMB_UP,
                 "alt": "Good"
             },
             {
                 "label": "Not Sure",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/not-sure-min.png",
+                "src": THUMB_UP,
                 "alt": "Not Sure"
             },
             {
                 "label": "Bad",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-down-min.png",
+                "src": THUMB_UP,
                 "alt": "Bad"
             }
         ]
@@ -26,17 +29,17 @@
         "Options": [
             {
                 "label": "Good",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-up-min.png",
+                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
                 "alt": "Good"
             },
             {
                 "label": "Not Sure",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/not-sure-min.png",
+                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
                 "alt": "Not Sure"
             },
             {
                 "label": "Bad",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-down-min.png",
+                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
                 "alt": "Bad"
             }
         ]
@@ -47,17 +50,17 @@
         "Options": [
             {
                 "label": "Good",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-up-min.png",
+                "src": "https://i.ibb.co/jg12SLv/thumb-up-min.png",
                 "alt": "Good"
             },
             {
                 "label": "Not Sure",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/not-sure-min.png",
+                "src": "https://i.ibb.co/x80mrnm/not-sure-min.png",
                 "alt": "Not Sure"
             },
             {
                 "label": "Bad",
-                "src": "https://raw.githubusercontent.com/Himanshupal0001/hostImages/main/thumb-down-min.png",
+                "src": "https://i.ibb.co/jvnmjqK/thumb-down-min.png",
                 "alt": "Bad"
             }
         ]
